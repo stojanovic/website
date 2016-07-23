@@ -13,6 +13,7 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(mars.jpg);
 }
 
 .fullscreen .background {
@@ -34,7 +35,7 @@ html, body {
 .metadata {
   z-index: 100;
   position: absolute;
-  display: block;
+  display: none;
   overflow: hidden;
   padding: 20px;
   bottom: 20px;
