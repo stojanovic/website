@@ -1,0 +1,775 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6. Connect mutations · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="EXERCISE-03-06.html" />
+    
+    
+    <link rel="prev" href="EXERCISE-03-04.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../WARMUPS.html">
+            
+                <a href="../WARMUPS.html">
+            
+                    
+                    Warmups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../part1/">
+            
+                <a href="../part1/">
+            
+                    
+                    Part 1: build a mock API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../part1/CONNECTIONS.html">
+            
+                <a href="../part1/CONNECTIONS.html">
+            
+                    
+                    1. Connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../part1/EXERCISE-01-01.html">
+            
+                <a href="../part1/EXERCISE-01-01.html">
+            
+                    
+                    2. Set up an AWS CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../part1/EXERCISE-01-02.html">
+            
+                <a href="../part1/EXERCISE-01-02.html">
+            
+                    
+                    3. Create a Node.js project and install Claudia.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../part1/EXERCISE-01-03.html">
+            
+                <a href="../part1/EXERCISE-01-03.html">
+            
+                    
+                    4. GET /meetups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../part1/EXERCISE-01-04.html">
+            
+                <a href="../part1/EXERCISE-01-04.html">
+            
+                    
+                    5. GET /meetups/id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../part1/EXERCISE-01-05.html">
+            
+                <a href="../part1/EXERCISE-01-05.html">
+            
+                    
+                    6. POST /meetups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../part1/EXERCISE-01-06.html">
+            
+                <a href="../part1/EXERCISE-01-06.html">
+            
+                    
+                    7. UPDATE /meetups/id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../part1/EXERCISE-01-07.html">
+            
+                <a href="../part1/EXERCISE-01-07.html">
+            
+                    
+                    8. DELETE /meetups/id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../part1/CONCLUSION.html">
+            
+                <a href="../part1/CONCLUSION.html">
+            
+                    
+                    9. Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../BREAK.html">
+            
+                <a href="../BREAK.html">
+            
+                    
+                    Break
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../part2/">
+            
+                <a href="../part2/">
+            
+                    
+                    Part 2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../part2/CONNECTIONS.html">
+            
+                <a href="../part2/CONNECTIONS.html">
+            
+                    
+                    1. Connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../part2/EXERCISE-02-01.html">
+            
+                <a href="../part2/EXERCISE-02-01.html">
+            
+                    
+                    2. Create a simple React app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../part2/EXERCISE-02-02.html">
+            
+                <a href="../part2/EXERCISE-02-02.html">
+            
+                    
+                    3. Pull all meetups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../part2/EXERCISE-02-03.html">
+            
+                <a href="../part2/EXERCISE-02-03.html">
+            
+                    
+                    4. See the meetup details
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../part2/EXERCISE-02-04.html">
+            
+                <a href="../part2/EXERCISE-02-04.html">
+            
+                    
+                    5. Post a new meetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../part2/EXERCISE-02-05.html">
+            
+                <a href="../part2/EXERCISE-02-05.html">
+            
+                    
+                    6. Update a meetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../part2/EXERCISE-02-06.html">
+            
+                <a href="../part2/EXERCISE-02-06.html">
+            
+                    
+                    7. Delete a meetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../part2/CONCLUSION.html">
+            
+                <a href="../part2/CONCLUSION.html">
+            
+                    
+                    9. Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../part2/BREAK.html">
+            
+                <a href="../part2/BREAK.html">
+            
+                    
+                    Break
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Part 3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="CONNECTIONS.html">
+            
+                <a href="CONNECTIONS.html">
+            
+                    
+                    1. Connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="EXERCISE-03-01.html">
+            
+                <a href="EXERCISE-03-01.html">
+            
+                    
+                    2. Setup Amplify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="EXERCISE-03-02.html">
+            
+                <a href="EXERCISE-03-02.html">
+            
+                    
+                    3. Deploy your app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="EXERCISE-03-03.html">
+            
+                <a href="EXERCISE-03-03.html">
+            
+                    
+                    4. Add auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="EXERCISE-03-04.html">
+            
+                <a href="EXERCISE-03-04.html">
+            
+                    
+                    5. Add and setup GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6" data-path="EXERCISE-03-05.html">
+            
+                <a href="EXERCISE-03-05.html">
+            
+                    
+                    6. Connect mutations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="EXERCISE-03-06.html">
+            
+                <a href="EXERCISE-03-06.html">
+            
+                    
+                    7. Connect queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="EXERCISE-03-07.html">
+            
+                <a href="EXERCISE-03-07.html">
+            
+                    
+                    8. Real-time subscriptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="EXERCISE-03-08.html">
+            
+                <a href="EXERCISE-03-08.html">
+            
+                    
+                    9. Upload images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="CONCLUSION.html">
+            
+                <a href="CONCLUSION.html">
+            
+                    
+                    10. Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../part4/">
+            
+                <a href="../part4/">
+            
+                    
+                    Workshop Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6. Connect mutations</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="exercise-5-connect-mutations">Exercise 5: Connect mutations</h1>
+<p>Now that you have your GraphQL backend, you&apos;ll need to add some data to it. You can start with a few mutations and queries directly in AWS Web Console. But eventually you want to connect your frontend app with your GraphQL backend.</p>
+<h2 id="task">Task</h2>
+<p>Connect <code>createMeetup</code>, <code>updateMeetup</code> and <code>deleteMeetup</code> mutations with your React application.</p>
+<h3 id="hints">Hints</h3>
+<ul>
+<li>Amplify and AppSync generated following three mutations for your Meetup model:<pre><code class="lang-javascript">createMeetup(input: CreateMeetupInput!): Meetup
+  updateMeetup(input: UpdateMeetupInput!): Meetup
+  deleteMeetup(input: DeleteMeetupInput!): Meetup
+</code></pre>
+</li>
+<li>You can see the details for all mutations in AWS Web Console. Navigate to AppSync (here&apos;s a direct link: <a href="https://eu-central-1.console.aws.amazon.com/appsync" target="_blank">link</a>), select your AppSync project (it should be named <code>meetup</code> or something similar) and select &quot;Schema&quot; from the menu on the right.</li>
+<li>You can use the following line to import React libs that allows you to talk to your GraphQL backend:<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { API, graphqlOperation } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;aws-amplify&apos;</span>;
+</code></pre>
+and this for importing mutations:<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { createMeetup <span class="hljs-keyword">as</span> CreateMeetup } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./graphql/mutations&apos;</span>
+</code></pre>
+</li>
+<li>See the documentation for more examples: <a href="https://aws-amplify.github.io/docs/js/api#mutations" target="_blank">https://aws-amplify.github.io/docs/js/api#mutations</a>.</li>
+</ul>
+<div class="accordion accordionClose"><div class="accordionButton"><div class="accordionTitle">Need more help?</div><div class="accordionSpinnerBox"><div class="accordionSpinner"></div></div></div><div class="accordionContent">
+<p>Your <code>createMeetup</code> mutation can look like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> Amplify, { API, graphqlOperation } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;aws-amplify&apos;</span>;
+<span class="hljs-keyword">import</span> { createMeetup <span class="hljs-keyword">as</span> CreateMeetup } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./graphql/mutations&apos;</span>;
+
+<span class="hljs-comment">// Mutation</span>
+<span class="hljs-keyword">const</span> meetupDetails = {
+  name: <span class="hljs-string">&apos;Meetup #25 - GraphQL with Amplify&apos;</span>,
+  group: <span class="hljs-string">&apos;JS Belgrade&apos;</span>,
+  date: <span class="hljs-string">&apos;2019-10-19&apos;</span>,
+  startTime: <span class="hljs-string">&apos;18:00&apos;</span>,
+  endTime: <span class="hljs-string">&apos;20:00&apos;</span>,
+  location: <span class="hljs-string">&apos;ICT Hub, Kralja Milana 10, Belgrade, Serbia&apos;</span>,
+  description: <span class="hljs-string">&apos;Long form description&apos;</span>
+};
+
+<span class="hljs-keyword">const</span> newMeetup = <span class="hljs-keyword">await</span> API.graphql(graphqlOperation(CreateMeetup, {input: meetupDetails}));
+<span class="hljs-built_in">console</span>.log(newMeetup);
+</code></pre>
+<p>To integrate this with your React app, make sure you invoke this line when you create a new meetup, and pass the data from the form as <code>meetupDetails</code>:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> newMeetup = <span class="hljs-keyword">await</span> API.graphql(graphqlOperation(CreateMeetup, {input: meetupDetails}));
+</code></pre>
+<p>Similar will work for update and delete, with a small difference: delete only requires an ID.</p>
+</div></div>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="EXERCISE-03-04.html" class="navigation navigation-prev " aria-label="Previous page: 5. Add and setup GraphQL">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="EXERCISE-03-06.html" class="navigation navigation-next " aria-label="Next page: 7. Connect queries">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6. Connect mutations","level":"1.5.6","depth":2,"next":{"title":"7. Connect queries","level":"1.5.7","depth":2,"path":"part3/EXERCISE-03-06.md","ref":"part3/EXERCISE-03-06.md","articles":[]},"previous":{"title":"5. Add and setup GraphQL","level":"1.5.5","depth":2,"path":"part3/EXERCISE-03-04.md","ref":"part3/EXERCISE-03-04.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","page-toc","accordion"],"pluginsConfig":{"accordion":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/EXERCISE-03-05.md","mtime":"2019-04-03T04:17:31.175Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-03T04:44:18.388Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

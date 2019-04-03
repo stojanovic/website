@@ -1,0 +1,769 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. Set up an AWS CLI · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="EXERCISE-01-02.html" />
+    
+    
+    <link rel="prev" href="CONNECTIONS.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../WARMUPS.html">
+            
+                <a href="../WARMUPS.html">
+            
+                    
+                    Warmups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Part 1: build a mock API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="CONNECTIONS.html">
+            
+                <a href="CONNECTIONS.html">
+            
+                    
+                    1. Connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="EXERCISE-01-01.html">
+            
+                <a href="EXERCISE-01-01.html">
+            
+                    
+                    2. Set up an AWS CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="EXERCISE-01-02.html">
+            
+                <a href="EXERCISE-01-02.html">
+            
+                    
+                    3. Create a Node.js project and install Claudia.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="EXERCISE-01-03.html">
+            
+                <a href="EXERCISE-01-03.html">
+            
+                    
+                    4. GET /meetups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="EXERCISE-01-04.html">
+            
+                <a href="EXERCISE-01-04.html">
+            
+                    
+                    5. GET /meetups/id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="EXERCISE-01-05.html">
+            
+                <a href="EXERCISE-01-05.html">
+            
+                    
+                    6. POST /meetups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="EXERCISE-01-06.html">
+            
+                <a href="EXERCISE-01-06.html">
+            
+                    
+                    7. UPDATE /meetups/id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="EXERCISE-01-07.html">
+            
+                <a href="EXERCISE-01-07.html">
+            
+                    
+                    8. DELETE /meetups/id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="CONCLUSION.html">
+            
+                <a href="CONCLUSION.html">
+            
+                    
+                    9. Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../BREAK.html">
+            
+                <a href="../BREAK.html">
+            
+                    
+                    Break
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../part2/">
+            
+                <a href="../part2/">
+            
+                    
+                    Part 2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../part2/CONNECTIONS.html">
+            
+                <a href="../part2/CONNECTIONS.html">
+            
+                    
+                    1. Connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../part2/EXERCISE-02-01.html">
+            
+                <a href="../part2/EXERCISE-02-01.html">
+            
+                    
+                    2. Create a simple React app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../part2/EXERCISE-02-02.html">
+            
+                <a href="../part2/EXERCISE-02-02.html">
+            
+                    
+                    3. Pull all meetups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../part2/EXERCISE-02-03.html">
+            
+                <a href="../part2/EXERCISE-02-03.html">
+            
+                    
+                    4. See the meetup details
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../part2/EXERCISE-02-04.html">
+            
+                <a href="../part2/EXERCISE-02-04.html">
+            
+                    
+                    5. Post a new meetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../part2/EXERCISE-02-05.html">
+            
+                <a href="../part2/EXERCISE-02-05.html">
+            
+                    
+                    6. Update a meetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../part2/EXERCISE-02-06.html">
+            
+                <a href="../part2/EXERCISE-02-06.html">
+            
+                    
+                    7. Delete a meetup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../part2/CONCLUSION.html">
+            
+                <a href="../part2/CONCLUSION.html">
+            
+                    
+                    9. Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../part2/BREAK.html">
+            
+                <a href="../part2/BREAK.html">
+            
+                    
+                    Break
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../part3/">
+            
+                <a href="../part3/">
+            
+                    
+                    Part 3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../part3/CONNECTIONS.html">
+            
+                <a href="../part3/CONNECTIONS.html">
+            
+                    
+                    1. Connections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../part3/EXERCISE-03-01.html">
+            
+                <a href="../part3/EXERCISE-03-01.html">
+            
+                    
+                    2. Setup Amplify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../part3/EXERCISE-03-02.html">
+            
+                <a href="../part3/EXERCISE-03-02.html">
+            
+                    
+                    3. Deploy your app
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../part3/EXERCISE-03-03.html">
+            
+                <a href="../part3/EXERCISE-03-03.html">
+            
+                    
+                    4. Add auth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../part3/EXERCISE-03-04.html">
+            
+                <a href="../part3/EXERCISE-03-04.html">
+            
+                    
+                    5. Add and setup GraphQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../part3/EXERCISE-03-05.html">
+            
+                <a href="../part3/EXERCISE-03-05.html">
+            
+                    
+                    6. Connect mutations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../part3/EXERCISE-03-06.html">
+            
+                <a href="../part3/EXERCISE-03-06.html">
+            
+                    
+                    7. Connect queries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../part3/EXERCISE-03-07.html">
+            
+                <a href="../part3/EXERCISE-03-07.html">
+            
+                    
+                    8. Real-time subscriptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../part3/EXERCISE-03-08.html">
+            
+                <a href="../part3/EXERCISE-03-08.html">
+            
+                    
+                    9. Upload images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../part3/CONCLUSION.html">
+            
+                <a href="../part3/CONCLUSION.html">
+            
+                    
+                    10. Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../part4/">
+            
+                <a href="../part4/">
+            
+                    
+                    Workshop Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2. Set up an AWS CLI</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="exercise-1-set-up-aws-account-aws-cli-and-credentials">Exercise 1: Set up AWS account, AWS CLI and credentials</h1>
+<p>You will use AWS services to develop and host your mock API. So, before you dive deep into coding your mock API, you&apos;ll need to set install and set up AWS CLI.</p>
+<p>Do you have an AWS account you can use? You need one account per team.</p>
+<blockquote>
+<p>Most likely all the exercises for this workshop will be free, as all the services we&apos;ll use have a generous free tier. But let&apos;s assume that the cost can be anywhere between $0 and $3 per month. Are you still ok with using your own AWS account?</p>
+</blockquote>
+<p>If the answer to any of previous questions is <em>no</em>, please contact the instructor to get a temporary account for your team.</p>
+<h2 id="tasks">Tasks</h2>
+<p>This exercise has the following tasks:</p>
+<ol>
+<li>Get an AWS account</li>
+<li>Install AWS CLI</li>
+<li>Configure AWS credentials</li>
+</ol>
+<h3 id="get-an-aws-account">Get an AWS account</h3>
+<p>You can create an AWS account at <a href="https://console.aws.amazon.com" target="_blank">https://console.aws.amazon.com</a>. Keep in mind you&apos;ll need to add a payment info and confirm your phone.</p>
+<p>If you can&apos;t create an account contact the instructor to get a temporary account access.</p>
+<h3 id="install-aws-cli">Install AWS CLI</h3>
+<p>Next thing you&apos;ll need to do is to install AWS CLI. You can find CLI at <a href="https://aws.amazon.com/cli/" target="_blank">https://aws.amazon.com/cli/</a>. If you are using Mac or Linux, make sure you have Python 2.6.5 or higher with <code>pip</code>.</p>
+<h3 id="configure-aws-credentials">Configure AWS credentials</h3>
+<p>Once you installed AWS CLI, you need to set up (and possibly create) AWS credentials.</p>
+<p>To create the credentials, sign in to the <a href="https://console.aws.amazon.com" target="_blank">AWS Web console</a>, open the Identity and Access Management (IAM) service and create a new user. Select &quot;Programmatic access&quot; in the choice for access type, and take note of the generated keys.</p>
+<p>Then run the following command from your terminal:</p>
+<pre><code class="lang-bash">aws configure
+</code></pre>
+<p>The AWS utility will ask you about the keys, so paste what you copied in the previous step. If you get a question about the region, respond with <code>eu-cental-1</code>.</p>
+<p>Check that your credentials are correctly configured by running the following command from your terminal:</p>
+<pre><code class="lang-bash">aws sts get-caller-identity
+</code></pre>
+<p>If this command prints a result similar to the one below, everything works correctly:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;UserId&quot;</span>: <span class="hljs-string">&quot;111111111111&quot;</span>,
+  <span class="hljs-string">&quot;Account&quot;</span>: <span class="hljs-string">&quot;222222222222&quot;</span>,
+  <span class="hljs-string">&quot;Arn&quot;</span>: <span class="hljs-string">&quot;arn:aws:iam:1111111111:root&quot;</span>
+}
+</code></pre>
+<p>If you get an error, check out the section Configuring the AWS CLI from the <a href="https://docs.aws.amazon.com/cli/" target="_blank">AWS CLI User Guide</a> for troubleshooting information, or contact the instructor.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CONNECTIONS.html" class="navigation navigation-prev " aria-label="Previous page: 1. Connections">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="EXERCISE-01-02.html" class="navigation navigation-next " aria-label="Next page: 3. Create a Node.js project and install Claudia.js">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. Set up an AWS CLI","level":"1.3.2","depth":2,"next":{"title":"3. Create a Node.js project and install Claudia.js","level":"1.3.3","depth":2,"path":"part1/EXERCISE-01-02.md","ref":"part1/EXERCISE-01-02.md","articles":[]},"previous":{"title":"1. Connections","level":"1.3.1","depth":2,"path":"part1/CONNECTIONS.md","ref":"part1/CONNECTIONS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","page-toc","accordion"],"pluginsConfig":{"accordion":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"exercises":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part1/EXERCISE-01-01.md","mtime":"2019-04-02T15:23:50.680Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-03T04:44:18.388Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+
